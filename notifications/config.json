@@ -1,0 +1,20 @@
+{
+  "base": {
+    "project": "tyulyaeva",
+    "environment": "test.qa.guru",
+    "comment": "HW_14_Telegram-бот",
+    "reportLink": "tmp/5600389328766443372/allure-report",
+    "language": "ru",
+    "allureFolder": "/tmp/14909134731499196065/allure-report",
+    "enableChart": true,
+    "enableSuitesPublishing": false,
+    "customData": {}
+  },
+  "telegram": {
+    "token": "7796999048:AAGmqMErI_0JmqoHhAXt9-2ygsSClwScMio",
+    "chat": "-1002665585131",
+    "topic": "",
+    "replyTo": "",
+    "templatePath": "/templates/telegram.ftl"
+  }
+}
