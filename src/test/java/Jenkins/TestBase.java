@@ -23,7 +23,7 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
         Configuration.browserSize = System.getProperty("browserResolution", "1920x1080");
-        Configuration.baseUrl = "https://demoqa.com/";
+        Configuration.baseUrl = "https://www.bookvoed.ru/";
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
         Configuration.holdBrowserOpen = false;
