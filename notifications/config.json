@@ -1,8 +1,8 @@
 {
   "base": {
-    "project": "tyulyaeva",
-    "environment": "test.qa.guru",
-    "comment": "HW_14_Telegram-бот",
+    "project": "tyulyaeva_inna",
+    "environment": "stage.test.qa.guru",
+    "comment": "HW_14_",
     "reportLink": "tmp/5600389328766443372/allure-report",
     "language": "ru",
     "allureFolder": "/tmp/14909134731499196065/allure-report",

@@ -1,4 +1,4 @@
-package test.Jenkins;
+package Jenkins;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
