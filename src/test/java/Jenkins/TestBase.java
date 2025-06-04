@@ -29,6 +29,7 @@ public class TestBase {
         Configuration.holdBrowserOpen = false;
 
 
+
         SelenideLogger.addListener("allure", new AllureSelenide());
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.of(
