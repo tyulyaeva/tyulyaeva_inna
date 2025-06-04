@@ -8,6 +8,7 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static com.codeborne.selenide.Selenide.open;
 
 @DisplayName("Bookvoed тесты")
 public class WebBookvoedVacabcyTests extends TestBase {
@@ -26,9 +27,9 @@ public class WebBookvoedVacabcyTests extends TestBase {
     @Test
     @DisplayName("Тест-кейс №1: Проверка поиска определенной серии книг")
     void searchResultsShouldContainDeterminedBookTest () {
+        open("https://www.bookvoed.ru/");
         WebBookvoedSteps steps = new WebBookvoedSteps();
-        steps.openBookvoedmainPage()
-              .closeLocationForm()
+        steps.closeLocationForm()
               .bookvoedBookSearchTest();
     }
 
