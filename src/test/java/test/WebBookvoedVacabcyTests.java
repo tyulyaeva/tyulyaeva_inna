@@ -35,7 +35,7 @@ public class WebBookvoedVacabcyTests extends TestBase {
     @Owner("inna_tyulyaeva")
     @DisplayName("Тест-кейс №2: Проверка перехода в раздел 'Планеры и планинги' с помощью меню 'Каталог'")
     @Test
-    public void checkMenuCatalogSectionTest() {
+    void checkMenuCatalogSectionTest() {
         WebBookvoedSteps steps = new WebBookvoedSteps();
         steps.openBookvoedmainPage()
                 .closeLocationForm()
@@ -49,7 +49,7 @@ public class WebBookvoedVacabcyTests extends TestBase {
     @Owner("inna_tyulyaeva")
     @DisplayName("Тест-кейс №3: Проверка просмотра первой карточки товара из категории 'Сувениры' - 'Красота и уход'")
     @Test
-    public void checkProductCardTest() {
+    void checkProductCardTest() {
         WebBookvoedSteps steps = new WebBookvoedSteps();
         steps.openBookvoedmainPage()
                 .closeLocationForm()
@@ -64,7 +64,7 @@ public class WebBookvoedVacabcyTests extends TestBase {
     @Owner("inna_tyulyaeva")
     @DisplayName("Тест-кейс №4: Проверка добавления товара из второй карточки на странице в корзину из категории 'Ручки шариковые'")
     @Test
-    public void checkPenBasketTest() {
+    void checkPenBasketTest() {
         WebBookvoedSteps steps = new WebBookvoedSteps();
         steps.openBookvoedmainPage()
                 .closeLocationForm()
@@ -80,7 +80,7 @@ public class WebBookvoedVacabcyTests extends TestBase {
     @Owner("inna_tyulyaeva")
     @DisplayName("Тест-кейс №5: Проверка смены города при первом посещении сайта")
     @Test
-    public void changeLocationPersonTest() {
+    void changeLocationPersonTest() {
         WebBookvoedSteps steps = new WebBookvoedSteps();
         steps.openBookvoedmainPage()
               .changeSityClick()
