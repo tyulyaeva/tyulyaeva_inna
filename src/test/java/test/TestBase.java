@@ -1,4 +1,4 @@
-package Jenkins;
+package test;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -7,7 +7,6 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import test.Attachments;
 
 import java.util.Map;
 import java.util.UUID;
@@ -24,7 +23,7 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
         Configuration.browserSize = System.getProperty("browserResolution", "1920x1080");
-        Configuration.baseUrl = "https://www.bookvoed.ru/";
+        //Configuration.baseUrl = "https://www.bookvoed.ru/";
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
         Configuration.holdBrowserOpen = false;

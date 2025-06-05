@@ -1,6 +1,5 @@
 package test;
 
-import Jenkins.TestBase;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -11,7 +10,7 @@ import org.junit.jupiter.api.*;
 public class WebBookvoedVacabcyTests extends TestBase {
 
     @BeforeEach
-    void setupConfig(){
+    public void setupConfig(){
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy ="eager";
     }
