@@ -1,4 +1,4 @@
-package test;
+package test.Jenkins;
 
 import io.qameta.allure.Step;
 

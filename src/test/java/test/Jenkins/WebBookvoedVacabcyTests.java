@@ -1,10 +1,11 @@
-package test;
+package test.Jenkins;
 
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
+import test.TestBase;
 
 @DisplayName("Bookvoed тесты")
 public class WebBookvoedVacabcyTests extends TestBase {
