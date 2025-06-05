@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class WebBookvoedSteps {
     @Step("Открыть страницу: https://www.bookvoed.ru")
     public WebBookvoedSteps openBookvoedmainPage() {
-        open(baseUrl);
+        open("https://www.bookvoed.ru");
         return this;
     }
 

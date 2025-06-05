@@ -16,7 +16,6 @@ public class WebBookvoedVacabcyTests extends TestBase {
     @BeforeEach
     void setupConfig(){
         Configuration.browserSize = "1920x1080";
-        baseUrl = "https://www.bookvoed.ru/";
         Configuration.pageLoadStrategy ="eager";
     }
 
@@ -27,9 +26,9 @@ public class WebBookvoedVacabcyTests extends TestBase {
     @Test
     @DisplayName("Тест-кейс №1: Проверка поиска определенной серии книг")
     void searchResultsShouldContainDeterminedBookTest () {
-        open(baseUrl);
         WebBookvoedSteps steps = new WebBookvoedSteps();
-        steps.closeLocationForm()
+        steps.openBookvoedmainPage()
+              .closeLocationForm()
               .bookvoedBookSearchTest();
     }
 
