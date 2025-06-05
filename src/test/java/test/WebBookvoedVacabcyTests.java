@@ -27,7 +27,7 @@ public class WebBookvoedVacabcyTests extends TestBase {
     @Test
     @DisplayName("Тест-кейс №1: Проверка поиска определенной серии книг")
     void searchResultsShouldContainDeterminedBookTest () {
-        open("https://www.bookvoed.ru/");
+        open(baseUrl);
         WebBookvoedSteps steps = new WebBookvoedSteps();
         steps.closeLocationForm()
               .bookvoedBookSearchTest();
