@@ -7,9 +7,6 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
 
-import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selenide.open;
-
 @DisplayName("Bookvoed тесты")
 public class WebBookvoedVacabcyTests extends TestBase {
 
