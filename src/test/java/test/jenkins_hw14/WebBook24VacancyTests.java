@@ -6,8 +6,9 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import test.TestBase;
 
-public class WebBook24VacancyTests {
+public class WebBook24VacancyTests extends TestBase {
     @Tag("book24_form")
     @Feature("VacancyJavaQa")
     @Story("Тестирование формы сайта: https://www.bookvoed.ru")
