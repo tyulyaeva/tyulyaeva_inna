@@ -18,8 +18,8 @@ public class WebMyShopSteps {
     public WebMyShopSteps myShopBookSearchTest() {
         $("._input_vn1tc_35").
                 setValue("Лев Толстой").pressEnter();
-        $("._items_ghgxy_1")
-                .shouldHave(text("Anna Karenina"));
+        $(".h1 .title")
+                .shouldHave(text("Лев Толстой"));
         return this;
 
     }
