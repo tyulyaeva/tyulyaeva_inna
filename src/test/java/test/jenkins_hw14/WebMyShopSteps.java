@@ -18,7 +18,7 @@ public class WebMyShopSteps {
     public WebMyShopSteps myShopBookSearchTest() {
         $("._input_vn1tc_35").
                 setValue("Лев Толстой").pressEnter();
-        $(".h1 .title")
+        $(".h1.title")
                 .shouldHave(text("Лев Толстой"));
         return this;
 
