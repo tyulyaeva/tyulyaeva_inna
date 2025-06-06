@@ -32,7 +32,7 @@ public class WebMyShopVacancyTests extends TestBase {
              .myShopBookSearchTest();
     }
 
-    @Tag("bookvoed_form")
+    @Tag("myshop_form")
     @Feature("VacancyJavaQa")
     @Story("Тестирование формы сайта: https://www.labirint.ru/")
     @Owner("inna_tyulyaeva")
@@ -44,7 +44,7 @@ public class WebMyShopVacancyTests extends TestBase {
                 .openCatalogMenu();
     }
 
-    @Tag("bookvoed_form")
+    @Tag("myshop_form")
     @Feature("VacancyJavaQa")
     @Story("Тестирование формы сайта: https://www.labirint.ru/")
     @Owner("inna_tyulyaeva")
@@ -57,7 +57,7 @@ public class WebMyShopVacancyTests extends TestBase {
                 .openProductCard();
     }
 
-    @Tag("bookvoed_form")
+    @Tag("myshop_form")
     @Feature("VacancyJavaQa")
     @Story("Тестирование формы сайта: https://www.labirint.ru/")
     @Owner("inna_tyulyaeva")
@@ -72,7 +72,7 @@ public class WebMyShopVacancyTests extends TestBase {
 
     }
 
-    @Tag("bookvoed_form")
+    @Tag("myshop_form")
     @Feature("VacancyJavaQa")
     @Story("Тестирование формы сайта: https://www.labirint.ru/")
     @Owner("inna_tyulyaeva")
