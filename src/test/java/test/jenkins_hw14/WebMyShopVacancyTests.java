@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import test.TestBase;
 
+@DisplayName("MyShop тесты")
 public class WebMyShopVacancyTests extends TestBase {
     @Tag("myshop_form")
     @Feature("VacancyJavaQa")
