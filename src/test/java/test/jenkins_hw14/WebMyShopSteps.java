@@ -14,7 +14,7 @@ public class WebMyShopSteps {
         return this;
     }
 
-    @Step("Найти книгу 'Воскресение' автора 'Стивен Кинг'")
+    @Step("Найти книгу '11/22/63' автора 'Стивен Кинг'")
     public WebMyShopSteps myShopBookSearchTest() {
         $("[id=search-field").
                 setValue("Стивен Кинг").pressEnter();
@@ -55,17 +55,17 @@ public class WebMyShopSteps {
         return this;
     }
 
-    @Step("Сменить текущую локацию на г.Волгоград'")
+    @Step("Сменить текущую локацию на г.Санкт-Петербург")
     public WebMyShopSteps changeSity() {
         $(".region-location-icon-txt").shouldBe(visible).click();
         $(".g-alttext-deepblue:nth-child(3)").click();
         return this;
     }
 
-    @Step("Проверить, что установлен в качестве текущей локации г.Санкт-Петербург ")
+    @Step("Проверить, что установлен в качестве текущей локации г.Санкт-Петербург")
     public WebMyShopSteps checkChangeSityClick() {
         $(".region-location-icon-txt")
-                .shouldHave(text("Санкт-Петербург "));
+                .shouldHave(text("Санкт-Петербург"));
         return this;
     }
 }
