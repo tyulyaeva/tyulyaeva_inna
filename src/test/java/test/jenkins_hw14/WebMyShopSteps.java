@@ -50,7 +50,8 @@ public class WebMyShopSteps {
     @Step("Добавить товар в корзину")
     public WebMyShopSteps addPenBasketTest() {
         $("._actions_zuu52_155").$("._button_ssd04_1").click();
-        $("._cartCount_1a3wc_104").shouldHave(text("1"));
+        $("._cartCount_1a3wc_104").click();
+        $(".b-bask-panel.b-bask-panel-order").shouldHave(text("11/22/63"));
         return this;
     }
 
