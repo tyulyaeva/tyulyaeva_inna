@@ -10,16 +10,16 @@ import static org.assertj.core.error.ShouldHave.shouldHave;
 public class WebMyShopSteps {
     @Step("Открыть страницу: https://my-shop.ru/")
     public WebMyShopSteps openMyShopMainPage() {
-        open("https://my-shop.ru/");
+        open("https://www.chitai-gorod.ru/");
         return this;
     }
 
     @Step("Найти книгу 'Гиперион' автора 'Дэн Симмонс'")
     public WebMyShopSteps myShopBookSearchTest() {
-        $("._input_vn1tc_35").
+        $("[name='search']").
                 setValue("Лев Толстой").pressEnter();
-        $(".h1").$(".title")
-                .shouldHave(text("Лев Толстой"));
+        $(".app-products-list.app-catalog__list")
+                .shouldHave(text("Воскресение"));
         return this;
     }
 
