@@ -11,7 +11,7 @@ import test.TestBase;
 public class WebBook24VacancyTests extends TestBase {
     @Tag("book24_form")
     @Feature("VacancyJavaQa")
-    @Story("Тестирование формы сайта: https://www.bookvoed.ru")
+    @Story("Тестирование формы сайта: https://my-shop.ru/")
     @Owner("inna_tyulyaeva")
     @Test
     @DisplayName("Тест-кейс №1: Проверка поиска определенной серии книг")

@@ -7,14 +7,14 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class WebBook24Steps {
-    @Step("Открыть страницу: https://book24.ru/")
+    @Step("Открыть страницу: https://my-shop.ru/")
     public WebBook24Steps openBook24MainPage() {
-        open("https://book24.ru/");
+        open("https://my-shop.ru/");
         return this;
     }
     @Step("Закрыть формы выбора локации пользователя")
     public WebBook24Steps closeLocationForm() {
-        $(".location-d__popup-close").click();
+        $(".menu-title").click();
         return this;
     }
 }
