@@ -12,12 +12,12 @@ import test.TestBase;
 
 @DisplayName("MyShop тесты")
 public class WebMyShopVacancyTests extends TestBase {
-        @BeforeEach
-        public void setupConfig(){
-        Configuration.browserSize = "1920x1080";
-        Configuration.pageLoadStrategy ="eager";
-        Configuration.baseUrl = "https://my-shop.ru/";
-    }
+//        @BeforeEach
+//        public void setupConfig(){
+//        Configuration.browserSize = "1920x1080";
+//        Configuration.pageLoadStrategy ="eager";
+//        Configuration.baseUrl = "https://my-shop.ru/";
+//    }
 
 
     @Tag("myshop_form")
