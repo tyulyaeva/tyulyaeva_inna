@@ -16,7 +16,7 @@ public class WebMyShopVacancyTests extends TestBase {
 //        public void setupConfig(){
 //        Configuration.browserSize = "1920x1080";
 //        Configuration.pageLoadStrategy ="eager";
-//        Configuration.baseUrl = "https://www.chitai-gorod.ru/";
+//        Configuration.baseUrl = "https://www.labirint.ru/";
 //    }
 
 

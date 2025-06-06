@@ -10,15 +10,15 @@ import static org.assertj.core.error.ShouldHave.shouldHave;
 public class WebMyShopSteps {
     @Step("Открыть страницу: https://my-shop.ru/")
     public WebMyShopSteps openMyShopMainPage() {
-        open("https://www.chitai-gorod.ru/");
+        open("https://www.labirint.ru/");
         return this;
     }
 
     @Step("Найти книгу 'Гиперион' автора 'Дэн Симмонс'")
     public WebMyShopSteps myShopBookSearchTest() {
-        $("[name='search']").
+        $("[id=search-field").
                 setValue("Лев Толстой").pressEnter();
-        $(".app-products-list.app-catalog__list")
+        $(".search-result")
                 .shouldHave(text("Воскресение"));
         return this;
     }
