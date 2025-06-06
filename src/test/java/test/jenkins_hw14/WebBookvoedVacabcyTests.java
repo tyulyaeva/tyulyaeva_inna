@@ -10,12 +10,12 @@ import test.TestBase;
 @DisplayName("Bookvoed тесты")
 public class WebBookvoedVacabcyTests extends TestBase {
 
-    @BeforeEach
-    public void setupConfig(){
-        Configuration.browserSize = "1920x1080";
-        Configuration.pageLoadStrategy ="eager";
-        Configuration.baseUrl = "https://www.bookvoed.ru/";
-    }
+//    @BeforeEach
+//    public void setupConfig(){
+//        Configuration.browserSize = "1920x1080";
+//        Configuration.pageLoadStrategy ="eager";
+//        Configuration.baseUrl = "https://www.bookvoed.ru/";
+//    }
 
     @Tag("bookvoed_form")
     @Feature("VacancyJavaQa")
