@@ -6,6 +6,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static org.assertj.core.error.ShouldHave.shouldHave;
 
 public class WebMyShopSteps {
     @Step("Открыть страницу: https://my-shop.ru/")
@@ -18,7 +19,7 @@ public class WebMyShopSteps {
     public WebMyShopSteps myShopBookSearchTest() {
         $("._input_vn1tc_35").
                 setValue("Лев Толстой").pressEnter();
-        $(".h1.title")
+        $(".h1").$(".title")
                 .shouldHave(text("Лев Толстой"));
         return this;
 
