@@ -48,7 +48,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @Feature("VacancyJavaQa")
     @Story("Тестирование формы сайта: https://www.labirint.ru/")
     @Owner("inna_tyulyaeva")
-    @DisplayName("Тест-кейс №3: Проверка просмотра первой карточки товара")
+    @DisplayName("Тест-кейс №3: Проверка просмотра карточки товара")
     @Test
     void checkProductCardTest() {
         WebMyShopSteps steps = new WebMyShopSteps();
