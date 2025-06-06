@@ -1,4 +1,4 @@
-package test.Jenkins;
+package test.jenkins_hw14;
 
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Feature;
