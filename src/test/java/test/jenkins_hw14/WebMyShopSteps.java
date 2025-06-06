@@ -4,8 +4,7 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.error.ShouldHave.shouldHave;
 
 public class WebMyShopSteps {
@@ -22,7 +21,6 @@ public class WebMyShopSteps {
         $(".h1").$(".title")
                 .shouldHave(text("Лев Толстой"));
         return this;
-
     }
 
     @Step("Открыть меню 'Каталог'")
