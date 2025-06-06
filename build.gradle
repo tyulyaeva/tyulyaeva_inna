@@ -63,7 +63,7 @@ task bookvoed_form(type: Test) {
 
 }
 
-task book24_form(type: Test) {
+task myshop_form(type: Test) {
     useJUnitPlatform {
         includeTags("book24_form")
     }
