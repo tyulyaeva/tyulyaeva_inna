@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import test.TestBase;
 
-@DisplayName("MyShop тесты")
+@DisplayName("Labirint.ru тесты")
 public class WebMyShopVacancyTests extends TestBase {
 //        @BeforeEach
 //        public void setupConfig(){
