@@ -147,7 +147,7 @@ ${TASK}
 ---
 
 <a id="allure"></a>
-## 📊 Allure Report
+## 📊 [Allure Report](https://jenkins.autotests.cloud/job/Labirint_Inna_Tyulyaeva/50/allure/)
 
 <p align="center">
   <img src="media/allure.png" width="850" alt="Allure Overview Dashboard"/>
