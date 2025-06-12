@@ -56,12 +56,6 @@ tasks.withType(Test) {
         }
     }
 }
-task bookvoed_form(type: Test) {
-    useJUnitPlatform {
-        includeTags("bookvoed_form")
-    }
-
-}
 
 task myshop_form(type: Test) {
     useJUnitPlatform {

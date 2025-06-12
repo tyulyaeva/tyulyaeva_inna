@@ -12,12 +12,9 @@ import test.TestBase;
 
 @DisplayName("Labirint.ru тесты")
 public class WebMyShopVacancyTests extends TestBase {
-//        @BeforeEach
-//        public void setupConfig(){
-//        Configuration.browserSize = "1920x1080";
-//        Configuration.pageLoadStrategy ="eager";
-//        Configuration.baseUrl = "https://www.labirint.ru/";
-//    }
+
+    private static final String AUTHOR = "Стивен Кинг";
+    private static final String BOOKNAME = "11/22/63";
 
 
     @Tag("myshop_form")
@@ -29,7 +26,7 @@ public class WebMyShopVacancyTests extends TestBase {
     void searchResultsShouldContainDeterminedBookTest () {
         WebMyShopSteps steps = new WebMyShopSteps();
         steps.openMyShopMainPage()
-             .myShopBookSearchTest();
+             .myShopBookSearch(AUTHOR,BOOKNAME);
     }
 
     @Tag("myshop_form")
@@ -53,8 +50,9 @@ public class WebMyShopVacancyTests extends TestBase {
     void checkProductCardTest() {
         WebMyShopSteps steps = new WebMyShopSteps();
         steps.openMyShopMainPage()
-                .myShopBookSearchTest()
-                .openProductCard();
+                .myShopBookSearch(AUTHOR,BOOKNAME)
+                .openProductCard()
+                .checkProductCard();
     }
 
     @Tag("myshop_form")
@@ -66,7 +64,7 @@ public class WebMyShopVacancyTests extends TestBase {
     void checkPenBasketTest() {
         WebMyShopSteps steps = new WebMyShopSteps();
         steps.openMyShopMainPage()
-                .myShopBookSearchTest()
+                .myShopBookSearch(AUTHOR,BOOKNAME)
                 .openProductCard()
                 .addPenBasketTest();
 

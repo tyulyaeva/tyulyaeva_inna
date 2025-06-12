@@ -5,7 +5,6 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
-import static org.assertj.core.error.ShouldHave.shouldHave;
 
 public class WebMyShopSteps {
     @Step("Открыть страницу: https://www.labirint.ru/")
@@ -15,11 +14,11 @@ public class WebMyShopSteps {
     }
 
     @Step("Найти книгу '11/22/63' автора 'Стивен Кинг'")
-    public WebMyShopSteps myShopBookSearchTest() {
+    public WebMyShopSteps myShopBookSearch(String AUTHOR, String BOOKNAME) {
         $("[id=search-field").
-                setValue("Стивен Кинг").pressEnter();
+                setValue(AUTHOR).pressEnter();
         $(".search-result")
-                .shouldHave(text("11/22/63"));
+                .shouldHave(text(BOOKNAME));
         return this;
     }
 
@@ -34,15 +33,14 @@ public class WebMyShopSteps {
         return this;
     }
 
-    @Step("Перейти в раздел 'Книги'")
-    public WebMyShopSteps openSectionBooks() {
-        $(".b-header-b-menu-e-link.top-link-menu.first-child .b-header-b-menu-e-text").click();
+    @Step("Проверить, что заголовок карточки товара содержит наименование книги")
+    public WebMyShopSteps checkProductCard() {
+        $("._h1_5o36c_18").shouldHave(text("11/22/63"));
         return this;
     }
 
     @Step("Открыть карточку товара")
     public WebMyShopSteps openProductCard() {
-        //$(".content-block.content-block-action").scrollIntoView(true).click();
         $(".product-card.need-watch.watched.gtm-watched:first-child .product-card__name:nth-child(3)").click();
         return this;
     }
