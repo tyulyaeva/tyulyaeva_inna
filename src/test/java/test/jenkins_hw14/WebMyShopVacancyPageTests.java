@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import test.TestBase;
 
 @DisplayName("Labirint.ru тесты")
-public class WebMyShopVacancyTests extends TestBase {
+public class WebMyShopVacancyPageTests extends TestBase {
 
     private static final String AUTHOR = "Стивен Кинг";
     private static final String BOOKNAME = "11/22/63";
@@ -22,7 +22,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @Test
     @DisplayName("Тест-кейс №1: Проверка поиска книги")
     void searchResultsShouldContainDeterminedBookTest () {
-        WebMyShopSteps steps = new WebMyShopSteps();
+        WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
         steps.openMyShopMainPage()
              .myShopAuthorSearch(AUTHOR)
              .myShopBookSearch(BOOKNAME);
@@ -35,7 +35,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @DisplayName("Тест-кейс №2: Проверка перехода в раздел 'Офисная канцелярия' с помощью меню 'Канцелярия'")
     @Test
     void checkMenuCatalogSectionTest() {
-        WebMyShopSteps steps = new WebMyShopSteps();
+        WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
         steps.openMyShopMainPage()
                 .openCatalogMenu();
     }
@@ -47,7 +47,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @DisplayName("Тест-кейс №3: Проверка просмотра карточки товара")
     @Test
     void checkProductCardTest() {
-        WebMyShopSteps steps = new WebMyShopSteps();
+        WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
         steps.openMyShopMainPage()
                 .myShopAuthorSearch(AUTHOR)
                 .myShopBookSearch(BOOKNAME)
@@ -62,7 +62,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @DisplayName("Тест-кейс №4: Проверка добавления товара в корзину")
     @Test
     void checkPenBasketTest() {
-        WebMyShopSteps steps = new WebMyShopSteps();
+        WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
         steps.openMyShopMainPage()
                 .myShopAuthorSearch(AUTHOR)
                 .myShopBookSearch(BOOKNAME)
@@ -78,7 +78,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @DisplayName("Тест-кейс №5: Проверка смены города")
     @Test
     void changeLocationPersonTest() {
-        WebMyShopSteps steps = new WebMyShopSteps();
+        WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
         steps.openMyShopMainPage()
                 .changeSity()
                 .checkChangeSityClick();
