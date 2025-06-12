@@ -13,10 +13,15 @@ public class WebMyShopSteps {
         return this;
     }
 
-    @Step("Найти книгу '11/22/63' автора 'Стивен Кинг'")
-    public WebMyShopSteps myShopBookSearch(String AUTHOR, String BOOKNAME) {
+    @Step("Найти автора 'Стивен Кинг'")
+    public WebMyShopSteps myShopAuthorSearch(String AUTHOR) {
         $("[id=search-field").
                 setValue(AUTHOR).pressEnter();
+        return this;
+    }
+
+    @Step("Найти книгу '11/22/63' автора 'Стивен Кинг'")
+    public WebMyShopSteps myShopBookSearch(String BOOKNAME) {
         $(".search-result")
                 .shouldHave(text(BOOKNAME));
         return this;

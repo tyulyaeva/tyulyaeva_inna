@@ -1,10 +1,8 @@
 package test.jenkins_hw14;
 
-import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -26,7 +24,8 @@ public class WebMyShopVacancyTests extends TestBase {
     void searchResultsShouldContainDeterminedBookTest () {
         WebMyShopSteps steps = new WebMyShopSteps();
         steps.openMyShopMainPage()
-             .myShopBookSearch(AUTHOR,BOOKNAME);
+             .myShopAuthorSearch(AUTHOR)
+             .myShopBookSearch(BOOKNAME);
     }
 
     @Tag("myshop_form")
@@ -50,7 +49,8 @@ public class WebMyShopVacancyTests extends TestBase {
     void checkProductCardTest() {
         WebMyShopSteps steps = new WebMyShopSteps();
         steps.openMyShopMainPage()
-                .myShopBookSearch(AUTHOR,BOOKNAME)
+                .myShopAuthorSearch(AUTHOR)
+                .myShopBookSearch(BOOKNAME)
                 .openProductCard()
                 .checkProductCard(BOOKNAME);
     }
@@ -64,7 +64,8 @@ public class WebMyShopVacancyTests extends TestBase {
     void checkPenBasketTest() {
         WebMyShopSteps steps = new WebMyShopSteps();
         steps.openMyShopMainPage()
-                .myShopBookSearch(AUTHOR,BOOKNAME)
+                .myShopAuthorSearch(AUTHOR)
+                .myShopBookSearch(BOOKNAME)
                 .openProductCard()
                 .addPenBasketTest();
 
