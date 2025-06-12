@@ -13,7 +13,7 @@ public class WebMyShopSteps {
         return this;
     }
 
-    @Step("Найти автора 'Стивен Кинг'")
+    @Step("Найти книги автора 'Стивен Кинг'")
     public WebMyShopSteps myShopAuthorSearch(String AUTHOR) {
         $("[id=search-field").
                 setValue(AUTHOR).pressEnter();
