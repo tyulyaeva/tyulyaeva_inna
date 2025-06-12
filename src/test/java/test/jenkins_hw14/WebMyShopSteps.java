@@ -34,8 +34,8 @@ public class WebMyShopSteps {
     }
 
     @Step("Проверить, что заголовок карточки товара содержит наименование книги")
-    public WebMyShopSteps checkProductCard() {
-        $("._h1_5o36c_18").shouldHave(text("11/22/63"));
+    public WebMyShopSteps checkProductCard(String BOOKNAME) {
+        $("._h1_5o36c_18").shouldHave(text(BOOKNAME));
         return this;
     }
 

@@ -52,7 +52,7 @@ public class WebMyShopVacancyTests extends TestBase {
         steps.openMyShopMainPage()
                 .myShopBookSearch(AUTHOR,BOOKNAME)
                 .openProductCard()
-                .checkProductCard();
+                .checkProductCard(BOOKNAME);
     }
 
     @Tag("myshop_form")
