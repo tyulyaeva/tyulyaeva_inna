@@ -1,5 +1,5 @@
 package test.jenkins_hw14;
-
+import pages.*;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -11,9 +11,11 @@ import test.TestBase;
 @DisplayName("Labirint.ru тесты")
 public class WebMyShopVacancyPageTests extends TestBase {
 
-//    private static final String AUTHOR = "Стивен Кинг";
-//    private static final String BOOKNAME = "Противостояние";
-
+    MainPage mainPage = new MainPage();
+    SearchPage searchPage = new SearchPage();
+    BookPage bookPage = new BookPage();
+    BasketPage basketPage = new BasketPage();
+    CatalogSectionPage catalogSectionPage = new CatalogSectionPage();
 
     @Tag("myshop_form")
     @Feature("VacancyJavaQa")
@@ -22,10 +24,10 @@ public class WebMyShopVacancyPageTests extends TestBase {
     @Test
     @DisplayName("Тест-кейс №1: Проверка поиска книги")
     void searchResultsShouldContainDeterminedBookTest () {
-        WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
-        steps.openMyShopMainPage()
-             .myShopAuthorSearch()
-             .myShopBookSearch();
+        WebMyShopVacancyPageTests steps = new WebMyShopVacancyPageTests();
+        steps.mainPage.MainPage();
+        mainPage.AuthorSearch();
+        searchPage.SearchPage();
     }
 
     @Tag("myshop_form")
@@ -35,9 +37,9 @@ public class WebMyShopVacancyPageTests extends TestBase {
     @DisplayName("Тест-кейс №2: Проверка перехода в раздел 'Офисная канцелярия' с помощью меню 'Канцелярия'")
     @Test
     void checkMenuCatalogSectionTest() {
-        WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
-        steps.openMyShopMainPage()
-                .openCatalogMenu();
+        WebMyShopVacancyPageTests steps = new WebMyShopVacancyPageTests();
+        steps.mainPage.MainPage();
+        catalogSectionPage.openCatalogMenu();
     }
 
     @Tag("myshop_form")
@@ -47,12 +49,12 @@ public class WebMyShopVacancyPageTests extends TestBase {
     @DisplayName("Тест-кейс №3: Проверка просмотра карточки товара")
     @Test
     void checkProductCardTest() {
-        WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
-        steps.openMyShopMainPage()
-                .myShopAuthorSearch()
-                .myShopBookSearch()
-                .openProductCard()
-                .checkProductCard();
+        WebMyShopVacancyPageTests steps = new WebMyShopVacancyPageTests();
+        steps.mainPage.MainPage();
+        mainPage.AuthorSearch();
+        searchPage.SearchPage();
+        bookPage.openProductCard();
+        bookPage.checkProductCardPage();
     }
 
     @Tag("myshop_form")
@@ -62,13 +64,13 @@ public class WebMyShopVacancyPageTests extends TestBase {
     @DisplayName("Тест-кейс №4: Проверка добавления товара в корзину")
     @Test
     void checkPenBasketTest() {
-        WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
-        steps.openMyShopMainPage()
-                .myShopAuthorSearch()
-                .myShopBookSearch()
-                .openProductCard()
-                .addPenBasketTest()
-                .checkPenBasketTest();
+        WebMyShopVacancyPageTests steps = new WebMyShopVacancyPageTests();
+        steps.mainPage.MainPage();
+        mainPage.AuthorSearch();
+        searchPage.SearchPage();
+        bookPage.openProductCard();
+        bookPage.clickToAddProduct();
+        basketPage.checkPenBasketTest();
 
     }
 
@@ -79,10 +81,10 @@ public class WebMyShopVacancyPageTests extends TestBase {
     @DisplayName("Тест-кейс №5: Проверка смены города")
     @Test
     void changeLocationPersonTest() {
-        WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
-        steps.openMyShopMainPage()
-                .changeSity()
-                .checkChangeSityClick();
+        WebMyShopVacancyPageTests steps = new WebMyShopVacancyPageTests();
+        steps.mainPage.MainPage();
+        mainPage.changeSity();
+        mainPage.checkChangeSityClick();
     }
 
 }
