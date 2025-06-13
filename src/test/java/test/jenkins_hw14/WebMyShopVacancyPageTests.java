@@ -1,4 +1,5 @@
 package test.jenkins_hw14;
+//import WebMyShopStepsPageObjects;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -12,7 +13,7 @@ import test.TestBase;
 public class WebMyShopVacancyPageTests extends TestBase {
 
     private static final String AUTHOR = "Стивен Кинг";
-    private static final String BOOKNAME = "11/22/63";
+    private static final String BOOKNAME = "Противостояние";
 
 
     @Tag("myshop_form")
@@ -24,8 +25,8 @@ public class WebMyShopVacancyPageTests extends TestBase {
     void searchResultsShouldContainDeterminedBookTest () {
         WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
         steps.openMyShopMainPage()
-             .myShopAuthorSearch(AUTHOR)
-             .myShopBookSearch(BOOKNAME);
+             .myShopAuthorSearch()
+             .myShopBookSearch();
     }
 
     @Tag("myshop_form")
@@ -49,10 +50,10 @@ public class WebMyShopVacancyPageTests extends TestBase {
     void checkProductCardTest() {
         WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
         steps.openMyShopMainPage()
-                .myShopAuthorSearch(AUTHOR)
-                .myShopBookSearch(BOOKNAME)
+                .myShopAuthorSearch()
+                .myShopBookSearch()
                 .openProductCard()
-                .checkProductCard(BOOKNAME);
+                .checkProductCard();
     }
 
     @Tag("myshop_form")
@@ -64,8 +65,8 @@ public class WebMyShopVacancyPageTests extends TestBase {
     void checkPenBasketTest() {
         WebMyShopStepsPageObjects steps = new WebMyShopStepsPageObjects();
         steps.openMyShopMainPage()
-                .myShopAuthorSearch(AUTHOR)
-                .myShopBookSearch(BOOKNAME)
+                .myShopAuthorSearch()
+                .myShopBookSearch()
                 .openProductCard()
                 .addPenBasketTest();
 

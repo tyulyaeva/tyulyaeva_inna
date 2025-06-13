@@ -31,7 +31,6 @@ public class TestBase {
         Configuration.holdBrowserOpen = false;
         Configuration.remote = "https://" +
                 selenoidUserLogin + ":" + selenoidUserPassword +"@" + selenoidUrl + "/wd/hub";
-        Configuration.holdBrowserOpen = false;
     }
 
     @BeforeEach

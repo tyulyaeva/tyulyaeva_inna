@@ -1,29 +1,36 @@
 package test.jenkins_hw14;
 
 import io.qameta.allure.Step;
+import pages.CheckProductCardPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class WebMyShopStepsPageObjects {
+
+    CheckProductCardPage checkProductCardPage = new CheckProductCardPage();
+
     @Step("Открыть страницу: https://www.labirint.ru/")
     public WebMyShopStepsPageObjects openMyShopMainPage() {
-        open("https://www.labirint.ru/");
+        //open("https://www.labirint.ru/");
+        checkProductCardPage.MainPage();
         return this;
     }
 
     @Step("Найти книги автора 'Стивен Кинг'")
-    public WebMyShopStepsPageObjects myShopAuthorSearch(String AUTHOR) {
-        $("[id=search-field").
-                setValue(AUTHOR).pressEnter();
+    public WebMyShopStepsPageObjects myShopAuthorSearch() {
+//        $("[id=search-field").
+//                setValue(AUTHOR).pressEnter();
+        checkProductCardPage.SearchPage();
         return this;
     }
 
-    @Step("Найти книгу '11/22/63' автора 'Стивен Кинг'")
-    public WebMyShopStepsPageObjects myShopBookSearch(String BOOKNAME) {
-        $(".search-result")
-                .shouldHave(text(BOOKNAME));
+    @Step("Найти книгу 'Противостояние' автора 'Стивен Кинг'")
+    public WebMyShopStepsPageObjects myShopBookSearch() {
+//        $(".search-result")
+//                .shouldHave(text(BOOKNAME));
+        checkProductCardPage.BookPage();
         return this;
     }
 
@@ -39,8 +46,9 @@ public class WebMyShopStepsPageObjects {
     }
 
     @Step("Проверить, что заголовок карточки товара содержит наименование книги")
-    public WebMyShopStepsPageObjects checkProductCard(String BOOKNAME) {
-        $("._h1_5o36c_18").shouldHave(text(BOOKNAME));
+    public WebMyShopStepsPageObjects checkProductCard() {
+//        $("._h1_5o36c_18").shouldHave(text(BOOKNAME));
+        checkProductCardPage.checkProductCardPage();
         return this;
     }
 
@@ -54,7 +62,7 @@ public class WebMyShopStepsPageObjects {
     public WebMyShopStepsPageObjects addPenBasketTest() {
         $("._actions_zuu52_155").$("._button_ssd04_1").click();
         $("._cartCount_1a3wc_104").click();
-        $(".b-bask-panel.b-bask-panel-order").shouldHave(text("11/22/63"));
+        $(".b-bask-panel.b-bask-panel-order").shouldHave(text("Противостояние"));
         return this;
     }
 
