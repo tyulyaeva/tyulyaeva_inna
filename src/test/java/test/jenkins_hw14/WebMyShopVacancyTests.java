@@ -1,3 +1,4 @@
+package test.jenkins_hw14;
 import pages.*;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
