@@ -1,4 +1,3 @@
-package test.jenkins_hw14;
 import pages.*;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -9,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import test.TestBase;
 
 @DisplayName("Labirint.ru тесты")
-public class WebMyShopVacancyPageTests extends TestBase {
+public class WebMyShopVacancyTests extends TestBase {
 
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
@@ -24,9 +23,8 @@ public class WebMyShopVacancyPageTests extends TestBase {
     @Test
     @DisplayName("Тест-кейс №1: Проверка поиска книги")
     void searchResultsShouldContainDeterminedBookTest () {
-        WebMyShopVacancyPageTests steps = new WebMyShopVacancyPageTests();
-        steps.mainPage.MainPage();
-        mainPage.AuthorSearch();
+        mainPage.MainPage()
+                .AuthorSearch();
         searchPage.SearchPage();
     }
 
@@ -37,8 +35,7 @@ public class WebMyShopVacancyPageTests extends TestBase {
     @DisplayName("Тест-кейс №2: Проверка перехода в раздел 'Офисная канцелярия' с помощью меню 'Канцелярия'")
     @Test
     void checkMenuCatalogSectionTest() {
-        WebMyShopVacancyPageTests steps = new WebMyShopVacancyPageTests();
-        steps.mainPage.MainPage();
+        mainPage.MainPage();
         catalogSectionPage.openCatalogMenu();
     }
 
@@ -49,12 +46,11 @@ public class WebMyShopVacancyPageTests extends TestBase {
     @DisplayName("Тест-кейс №3: Проверка просмотра карточки товара")
     @Test
     void checkProductCardTest() {
-        WebMyShopVacancyPageTests steps = new WebMyShopVacancyPageTests();
-        steps.mainPage.MainPage();
-        mainPage.AuthorSearch();
+        mainPage.MainPage()
+                .AuthorSearch();
         searchPage.SearchPage();
-        bookPage.openProductCard();
-        bookPage.checkProductCardPage();
+        bookPage.openProductCard()
+                .checkProductCardPage();
     }
 
     @Tag("myshop_form")
@@ -64,12 +60,11 @@ public class WebMyShopVacancyPageTests extends TestBase {
     @DisplayName("Тест-кейс №4: Проверка добавления товара в корзину")
     @Test
     void checkPenBasketTest() {
-        WebMyShopVacancyPageTests steps = new WebMyShopVacancyPageTests();
-        steps.mainPage.MainPage();
-        mainPage.AuthorSearch();
+        mainPage.MainPage()
+                .AuthorSearch();
         searchPage.SearchPage();
-        bookPage.openProductCard();
-        bookPage.clickToAddProduct();
+        bookPage.openProductCard()
+                .clickToAddProduct();
         basketPage.checkPenBasketTest();
 
     }
@@ -81,10 +76,9 @@ public class WebMyShopVacancyPageTests extends TestBase {
     @DisplayName("Тест-кейс №5: Проверка смены города")
     @Test
     void changeLocationPersonTest() {
-        WebMyShopVacancyPageTests steps = new WebMyShopVacancyPageTests();
-        steps.mainPage.MainPage();
-        mainPage.changeSity();
-        mainPage.checkChangeSityClick();
+        mainPage.MainPage()
+                .changeSity()
+                .checkChangeSityClick();
     }
 
 }

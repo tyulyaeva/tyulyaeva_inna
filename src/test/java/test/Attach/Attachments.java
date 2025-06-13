@@ -1,4 +1,4 @@
-package test.jenkins_hw14;
+package test.Attach;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
