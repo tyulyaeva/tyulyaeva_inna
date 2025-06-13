@@ -1,5 +1,4 @@
 package test.jenkins_hw14;
-//import WebMyShopStepsPageObjects;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -12,8 +11,8 @@ import test.TestBase;
 @DisplayName("Labirint.ru тесты")
 public class WebMyShopVacancyPageTests extends TestBase {
 
-    private static final String AUTHOR = "Стивен Кинг";
-    private static final String BOOKNAME = "Противостояние";
+//    private static final String AUTHOR = "Стивен Кинг";
+//    private static final String BOOKNAME = "Противостояние";
 
 
     @Tag("myshop_form")
@@ -68,7 +67,8 @@ public class WebMyShopVacancyPageTests extends TestBase {
                 .myShopAuthorSearch()
                 .myShopBookSearch()
                 .openProductCard()
-                .addPenBasketTest();
+                .addPenBasketTest()
+                .checkPenBasketTest();
 
     }
 
