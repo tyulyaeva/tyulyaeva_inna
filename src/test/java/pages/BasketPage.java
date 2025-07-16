@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class BasketPage {
 
-    private static final String BOOKNAME = "Противостояние";
+    private static final String BOOKNAME = "Воспламеняющая";
 
     @Step("Проверить добавленный товар в корзине")
     public BasketPage checkPenBasketTest() {

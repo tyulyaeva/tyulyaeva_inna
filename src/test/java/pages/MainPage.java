@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class MainPage {
 
     private static final String  MainPage = "https://www.labirint.ru/",
-                            AUTHOR = "Стивен Кинг";
+                                 AUTHOR = "Стивен Кинг";
 
     @Step("Открыть страницу: https://www.labirint.ru/")
     public MainPage MainPage() {

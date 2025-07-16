@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class BookPage {
-    private static final String BOOKNAME = "Противостояние";
+    private static final String BOOKNAME = "Воспламеняющая";
 
     @Step("Проверить, что заголовок карточки товара содержит наименование книги")
     public BookPage checkProductCardPage() {
@@ -16,7 +16,7 @@ public class BookPage {
 
     @Step("Открыть карточку товара")
     public BookPage openProductCard() {
-        $(".product-card.need-watch.watched.gtm-watched:first-child .product-card__name:nth-child(3)").click();
+        $("[href='/books/867711/']").click();
         return this;
     }
 

@@ -14,8 +14,7 @@ public class CatalogSectionPage {
     public CatalogSectionPage openCatalogMenu() {
         $(".b-header-b-menu-e-list-item.b-toggle.b-header-b-menu-e-list-item-m-temp.analytics-click-js:nth-child(6) .b-header-b-menu-e-text")
                 .shouldBe(visible).click();
-        $(".col-xs-12.col-sm-6.col-md-4.col-xl-3.gutter-genre-list:nth-child(4) a")
-                .shouldBe(visible).click();
+        $("[href='/genres/1444/']").click();
         $(".genre-name")
                 .shouldHave(text(SectionPage));
         return this;
